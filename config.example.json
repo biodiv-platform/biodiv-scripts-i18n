@@ -1,0 +1,18 @@
+{
+  "jsonPath": "/home/user/git/biodiv-ui/locales/",
+  "defaultLanguage": "en",
+  "languages": ["en", "fr", "hi"],
+  "sheetId": "x",
+  "serviceAccount": {
+    "type": "service_account",
+    "project_id": "x",
+    "private_key_id": "x",
+    "private_key": "x",
+    "client_email": "x@x.iam.gserviceaccount.com",
+    "client_id": "x",
+    "auth_uri": "x",
+    "token_uri": "x",
+    "auth_provider_x509_cert_url": "x",
+    "client_x509_cert_url": "x"
+  }
+}

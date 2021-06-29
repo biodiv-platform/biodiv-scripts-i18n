@@ -1,0 +1,18 @@
+{
+  "name": "biodiv-scripts-i18n",
+  "version": "1.0.0",
+  "description": "biodiv-scripts-i18n",
+  "author": "harshzalavadiya",
+  "license": "Apache-2.0",
+  "scripts": {
+    "upload": "node ./src/upload.js",
+    "download": "node ./src/download.js",
+    "delete-sheets": "node ./src/delete-sheets.js"
+  },
+  "dependencies": {
+    "flat": "^5.0.2",
+    "globby": "^11.0.4",
+    "google-spreadsheet": "^3.1.15"
+  },
+  "keywords": []
+}
