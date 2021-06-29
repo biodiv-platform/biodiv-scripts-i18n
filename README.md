@@ -1,13 +1,14 @@
-# i18n + Spreadsheet Migrator
+# i18n + Google Sheet Migrator
 
 This script helps in automating translation process to and from google sheet and local json
 
 ## Commands
 
 ```bash
-yarn install   # to install dependencies
-yarn upload    # from local to google sheet upload
-yarn downlod   # from google sheet to local download
+yarn install         # to install dependencies
+yarn upload          # from local to google sheet upload
+yarn downlod         # from google sheet to local download
+yarn delete-sheets   # deletes all sheets on google-sheets
 ```
 
 ## References
