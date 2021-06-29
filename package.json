@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "upload": "node ./src/upload.js",
+    "upload:full": "node ./src/upload-full.js",
     "download": "node ./src/download.js",
     "delete-sheets": "node ./src/delete-sheets.js"
   },

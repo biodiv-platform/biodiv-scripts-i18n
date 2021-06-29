@@ -13,13 +13,42 @@ const init = async () => {
 
   for (const sheetName of sheets) {
     await wait();
-    const sheet = await getSheet(doc, sheetName, true);
-    const localData = getLocalData(sheetName);
-    await sheet.addRows(localData);
-    console.log(`uploaded ${sheetName}`)
-  }
 
-  // console.log(doc.sheetsByTitle["Sheet1"], doc.sheetsByTitle["Sheet2"]);
+    let update = false;
+
+    const sheet = await getSheet(doc, sheetName);
+
+    const sheetRows = await sheet.getRows();
+    const sheetKeys = sheetRows.map((row) => row.key);
+
+    const localRows = getLocalData(sheetName);
+    const localKeys = localRows.map((row) => row.key);
+
+    // check for new rows
+    let newRows = [];
+    localRows.forEach((localRow) => {
+      if (!sheetKeys.includes(localRow.key)) {
+        update = true;
+        newRows.push(localRow);
+        console.log(`adding row ${sheetName} -> ${localRow.key}`);
+      }
+    });
+    await sheet.addRows(newRows);
+
+    // check for deleted ones
+    await sheetRows.forEach(async (sheetRow) => {
+      if (!localKeys.includes(sheetRow.key)) {
+        update = true;
+        sheetRow.delete();
+        await wait();
+        console.log(`deleting row ${sheetName} -> ${sheetRow.key}`);
+      }
+    });
+
+    if (update) {
+      console.log(`partial updated ${sheetName}`);
+    }
+  }
 };
 
 init();
