@@ -1,6 +1,7 @@
 const flat = require("flat");
 const path = require("path");
 const fs = require("fs");
+const sortObject = require("sorted-object");
 
 const { languages, jsonPath } = require("../config.json");
 
@@ -21,7 +22,7 @@ const writeJSON = (sheetName, data) => {
     const langPath = path.join(jsonPath, language, `${sheetName}.json`);
     fs.writeFileSync(
       langPath,
-      JSON.stringify(flat.unflatten(data[language]), null, 2) + "\n"
+      JSON.stringify(flat.unflatten(sortObject(data[language])), null, 2) + "\n"
     );
   }
 };

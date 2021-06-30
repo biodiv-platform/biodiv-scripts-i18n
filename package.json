@@ -13,7 +13,8 @@
   "dependencies": {
     "flat": "^5.0.2",
     "globby": "^11.0.4",
-    "google-spreadsheet": "^3.1.15"
+    "google-spreadsheet": "^3.1.15",
+    "sorted-object": "^2.0.1"
   },
   "keywords": []
 }
