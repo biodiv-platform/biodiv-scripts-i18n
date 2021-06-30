@@ -1,7 +1,7 @@
 {
   "jsonPath": "/home/user/git/biodiv-ui/locales/",
   "defaultLanguage": "en",
-  "languages": ["en", "fr", "hi"],
+  "languages": ["en", "fr", "hi", "mg"],
   "sheetId": "x",
   "serviceAccount": {
     "type": "service_account",
