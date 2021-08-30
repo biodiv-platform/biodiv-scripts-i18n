@@ -8,12 +8,14 @@
     "upload": "node ./src/upload.js",
     "upload:full": "node ./src/upload-full.js",
     "download": "node ./src/download.js",
-    "delete-sheets": "node ./src/delete-sheets.js"
+    "delete-sheets": "node ./src/delete-sheets.js",
+    "init:language": "node ./src/init-language.js"
   },
   "dependencies": {
     "flat": "^5.0.2",
     "globby": "^11.0.4",
     "google-spreadsheet": "^3.1.15",
+    "mkdirp": "^1.0.4",
     "sorted-object": "^2.0.1"
   },
   "keywords": []
